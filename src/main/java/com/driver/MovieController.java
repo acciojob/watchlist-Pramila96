@@ -18,7 +18,7 @@ public class MovieController {
         return new ResponseEntity<>("New movie added successfully", HttpStatus.CREATED);
     }
     @PostMapping("add_director")
-    public ResponseEntity<String> addDiector(@RequestBody Director director)
+    public ResponseEntity<String> addDirector(@RequestBody Director director)
     {
         movieService.addDirector(director);
         return new ResponseEntity<>("New director added successfully",HttpStatus.CREATED);
@@ -30,7 +30,7 @@ public class MovieController {
         return new ResponseEntity<>("Movie Director Pair added successfully",HttpStatus.CREATED);
     }
     @GetMapping("/get_movie_by_name/{name}")
-    public ResponseEntity<Movie> getMoviesByName(@PathVariable String name)
+    public ResponseEntity<Movie> getMovieByName(@PathVariable String name)
     {
         Movie movies=movieService.findMovie(name);
         return new ResponseEntity<>(movies,HttpStatus.FOUND);

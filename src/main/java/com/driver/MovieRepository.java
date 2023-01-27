@@ -20,11 +20,11 @@ public class MovieRepository {
         this.directorMovieMap=new HashMap<String, List<String>>();
     }
 
-    public void saveMovie( Movie movie)
+    public void addMovie( Movie movie)
    {
        movieMap.put(movie.getName(),movie);
    }
-    public void saveDirector(Director director)
+    public void addDirector(Director director)
     {
         direcctorMap.put(director.getName(),director);
     }

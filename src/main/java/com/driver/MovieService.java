@@ -11,11 +11,11 @@ public class MovieService {
     MovieRepository movieRepository;
     public void addMovie(Movie movie)
     {
-       movieRepository.saveMovie(movie);
+       movieRepository.addMovie(movie);
     }
     public void addDirector(Director director)
     {
-        movieRepository.saveDirector(director);
+        movieRepository.addDirector(director);
     }
     public void createMovieDirector(String movie,String director)
     {
